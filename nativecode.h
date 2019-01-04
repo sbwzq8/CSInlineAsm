@@ -1,1 +1,1 @@
-﻿wchar_t* GetStringFromNative();
+﻿wchar_t* GetStringFromNative(int size);

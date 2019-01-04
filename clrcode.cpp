@@ -15,16 +15,19 @@ namespace MyInteropCode
 
 	public:
 
-		static String^ CallCPPFcn()
+		static String^ CallCPPFcn(int test)
 
 		{
+			int size = 1000;
 
-			static wchar_t c[1500];
+			static wchar_t c[1000];
 			wchar_t* ptr;
 
-			ptr = GetStringFromNative();
+			ptr = GetStringFromNative(1500);
 
 			printf("%s", ptr);
+			printf("%d", test);
+
 
 			return gcnew String(c);
 
